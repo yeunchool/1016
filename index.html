@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>예은교회 주일 예배 스터디 카드</title>
+    
+    <!-- 카카오톡 공유 썸네일 및 정보 (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="예은교회 주일 예배 스터디 카드 - 내가 나를 위하여">
+    <meta property="og:description" content="이사야 43장 | 나의 어떠함이 아닌, 변함없는 하나님의 이름에 근거한 구원의 은혜를 찬양합시다.">
+    <!-- 아래 링크는 입력하신 유튜브 영상(YqVi-unNXv4)의 고화질 썸네일을 자동으로 가져옵니다 -->
+    <meta property="og:image" content="https://img.youtube.com/vi/YqVi-unNXv4/maxresdefault.jpg">
+    <meta property="og:url" content="https://yeunchool.github.io/">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #0d9488; --primary-light: #ccfbf1; --primary-dark: #115e59;
+            --bg: #f1f5f9; --app-bg: #f8fafc; 
+        }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; } 
+        body { background-color: var(--bg); margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100dvh; font-family: 'Noto Sans KR', sans-serif; overflow: hidden; }
+        .app-container { width: 100vw; height: 100dvh; background-color: var(--app-bg); display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
+        .app-container::-webkit-scrollbar { display: none; }
+        @media (min-width: 768px) { .app-container { width: 450px; height: 90vh; border-radius: 2.5rem; border: 10px solid #1e293b; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3); } }
+        
+        .slide-section { flex: 0 0 100%; width: 100%; height: 100%; scroll-snap-align: start; scroll-snap-stop: always; display: flex; flex-direction: column; position: relative; overflow: hidden; background: white; }
+        .section-content { flex: 1; overflow-y: auto; padding: 3rem 1.5rem 2rem 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+        .section-content::-webkit-scrollbar { display: none; }
+        
+        .nav-footer { flex-shrink: 0; padding: 1.2rem 1.5rem; background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(15px); display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid #e2e8f0; z-index: 40; }
+        .btn-nav { padding: 0.9rem 1rem; border-radius: 1.2rem; font-weight: 700; font-size: 0.95rem; flex: 1; text-align: center; cursor: pointer; border: none; transition: 0.3s; }
+        .btn-next { background-color: var(--primary); color: white; }
+        .btn-prev { background-color: #f1f5f9; color: #64748b; border: 1px solid #e2e8f0; }
+        
+        .detail-text { font-size: 1.15rem; line-height: 1.8; color: #334155; word-break: keep-all; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; border-radius: 1rem; overflow: hidden; background: #000; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+        
+        .badge { display: inline-block; padding: 0.3rem 0.8rem; background-color: var(--primary-light); color: var(--primary-dark); font-weight: 700; border-radius: 2rem; font-size: 0.85rem; margin-bottom: 1rem; }
+        .card { background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border: 1px solid #f1f5f9; }
+        
+        .mask-word { background: #e2e8f0; color: #e2e8f0; padding: 0 4px; border-radius: 4px; cursor: pointer; transition: 0.3s; }
+        .mask-word:active { background: transparent; color: var(--primary-dark); font-weight: bold; }
+
+        @media print {
+            body, html { background: white !important; overflow: visible !important; height: auto !important; }
+            .app-container { display: block !important; width: 100% !important; border: none !important; box-shadow: none !important; }
+            .slide-section { page-break-after: always !important; height: auto !important; display: block !important; border-bottom: 1px solid #eee; padding-bottom: 2rem; }
+            .nav-footer, .btn-nav { display: none !important; }
+            .section-content { padding: 1rem 0 !important; overflow: visible !important; }
+            .card { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container" id="app">
+
+        <div class="slide-section" id="sec1">
+            <div class="section-content">
+                <div>
+                    <span class="badge">예은교회 2026. 10. 18 주일</span>
+                    <h1 class="text-3xl font-bold text-gray-800 font-[Nanum_Myeongjo] leading-tight mb-2">내가 나를 위하여</h1>
+                    <p class="text-gray-500 font-medium">본문: 이사야 43:7, 21, 25</p>
+                </div>
+                <div class="video-wrapper mt-4">
+                    <iframe src="https://www.youtube.com/embed/YqVi-unNXv4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="card mt-4 bg-[var(--primary-light)] border-none">
+                    <p class="text-[var(--primary-dark)] font-bold text-center">"나의 어떠함이 아닌, 하나님의 이름('나를 위하여')에 근거한 절대적이고 변함없는 구원의 은혜를 기억하며 찬송하는 삶을 삽시다."</p>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-next w-full" onclick="scrollToSec('sec2')">설교 강해 보기 ➔</button>
+            </div>
+        </div>
+
+        <div class="slide-section" id="sec2">
+            <div class="section-content">
+                <span class="badge">Sermon Outline</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">설교 강해</h2>
+                
+                <div class="space-y-4">
+                    <div class="card"><h3 class="font-bold text-lg mb-1">서론</h3><p class="text-gray-600">바벨론 강가에서 수금을 버드나무에 건 백성들의 탄식과 세 가지 질문(우리는 누구인가, 우리 죄는 어떻게 되는가, 다시 노래할 수 있을까)에 하나님은 가장 든든한 약속인 "내가 나를 위하여"라고 응답하십니다.</p></div>
+                    <div class="card border-l-4 border-[var(--primary)]"><h3 class="font-bold text-lg mb-1">Point 1. 내가 나를 위하여 창조하였다 (7절)</h3><p class="text-gray-600">우리는 하나님의 영광을 위해 지음 받은 존재이며, 창조주 하나님의 이름이 걸린 걸작품입니다. 하나님은 물과 불 가운데서도 당신의 작품인 우리를 온전히 지키십니다.</p></div>
+                    <div class="card border-l-4 border-[var(--primary)]"><h3 class="font-bold text-lg mb-1">Point 2. 내가 나를 위하여 사죄한다 (25절)</h3><p class="text-gray-600">하나님은 자신의 이름을 위하여 우리의 죄를 안개가 사라짐 같이 도말하십니다. 예수 그리스도의 십자가 대속으로 빚 문서가 완전히 지워졌고, 이 용서는 결코 취소되지 않습니다.</p></div>
+                    <div class="card border-l-4 border-[var(--primary)]"><h3 class="font-bold text-lg mb-1">Point 3. 내가 나를 위하여 찬송하게 한다 (21절)</h3><p class="text-gray-600">우리를 창조하시고 사죄하신 목적은 은혜의 영광을 찬미하게 하려는 것입니다. 바울과 실라처럼 감옥 같은 현실 속에서도 하나님을 찬양할 때 우리는 가장 우리다워집니다.</p></div>
+                    <div class="card bg-gray-50"><h3 class="font-bold text-lg mb-1">결론</h3><p class="text-gray-600">나의 자격이 아니라 하나님의 이름에 달린 구원임을 확신합시다. 지워진 죄의 장부를 다시 들추지 말고, 어떠한 환경 속에서도 멈추었던 수금을 다시 들고 하나님을 찬송하는 성도가 됩시다.</p></div>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec1')">이전</button>
+                <button class="btn-nav btn-next" onclick="scrollToSec('sec3')">성서 주해 ➔</button>
+            </div>
+        </div>
+
+        <div class="slide-section" id="sec3">
+            <div class="section-content">
+                <span class="badge">Deep Exegesis</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">본문 깊이 읽기</h2>
+                <div class="card">
+                    <p class="detail-text">이사야 43장에 세 번이나 반복되는 "내가 나를 위하여(For my own sake)"라는 표현은 신인동형론적 이기주의를 뜻하는 것이 결코 아닙니다. 이는 이스라엘의 구원이 인간의 공로나 행위에 의존하지 않는 무조건적인 은혜의 행위임을 선포하는 가장 강력한 복음의 진술입니다. 바벨론 포로기라는 절망적 상황 속에서 백성들은 자신들의 죄악으로 인해 언약이 파기되었다고 절망했지만, 하나님은 당신의 거룩한 이름과 영광이 이스라엘의 회복과 직결되어 있음을 선언하십니다. 본문에 쓰인 "도말한다(마하, מָחָה)"는 표현은 고대 근동에서 채무 기록을 물리적으로 완전히 지워버리는 법적 행위를 의미하며, 이는 장차 예수 그리스도의 십자가 대속을 통해 성취될 영원하고 완전한 사죄(골 2:14)를 예표합니다. 결국 창조(7절), 구속과 사죄(25절), 그리고 찬송(21절)으로 이어지는 구원의 전 여정은 오직 하나님의 신실하심에 기초하며, 이는 오늘날 절망 가운데 있는 성도들에게도 동일하게 적용되는 궁극적인 위로와 소망의 확고한 근거가 됩니다.</p>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec2')">이전</button>
+                <button class="btn-nav btn-next" onclick="scrollToSec('sec4')">원어 탐구 ➔</button>
+            </div>
+        </div>
+
+        <div class="slide-section" id="sec4">
+            <div class="section-content">
+                <span class="badge">Lexicon</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">성서 원어 탐구</h2>
+                <div class="space-y-4">
+                    <div class="card"><div class="text-[var(--primary)] font-bold text-lg">바라(בָּרָא)</div><div class="text-xl font-bold">창조하다</div><p class="text-gray-600">오직 하나님만이 주어가 될 수 있는 창조 행위로, 망가진 우리를 다시 새롭게 빚으시는 전능한 능력을 의미합니다.</p></div>
+                    <div class="card"><div class="text-[var(--primary)] font-bold text-lg">마하(מָחָה)</div><div class="text-xl font-bold">도말하다, 지워버리다</div><p class="text-gray-600">채무가 적힌 장부나 기록의 글씨를 문질러 완전히 없애버리는 법적 행위로, 예수님의 십자가 대속을 통한 사죄를 예표합니다.</p></div>
+                    <div class="card"><div class="text-[var(--primary)] font-bold text-lg">테힐라(תְּהִלָּה)</div><div class="text-xl font-bold">찬송</div><p class="text-gray-600">하나님의 백성이 지음받은 궁극적인 목적으로, 구원의 은혜를 깊이 깨달을 때 억지가 아닌 기쁨으로 터져 나오는 찬송입니다.</p></div>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec3')">이전</button>
+                <button class="btn-nav btn-next" onclick="scrollToSec('sec5')">QT 묵상 ➔</button>
+            </div>
+        </div>
+
+        <div class="slide-section" id="sec5">
+            <div class="section-content">
+                <span class="badge">Quiet Time</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">말씀 묵상 (4 Step)</h2>
+                <div class="space-y-4">
+                    <div class="card"><h3 class="font-bold text-[var(--primary)] mb-2">👀 관찰</h3><p class="text-gray-800 font-medium">이사야 43장 7절, 21절, 25절에서 하나님이 이스라엘을 창조하고, 죄를 도말하며, 찬송하게 하신 모든 목적은 '누구를 위하여'라고 반복해서 말씀하시나요?</p></div>
+                    <div class="card"><h3 class="font-bold text-[var(--primary)] mb-2">💡 해석</h3><p class="text-gray-800 font-medium">"내가 나를 위하여"라는 하나님의 선언이 나의 행위나 자격에 의존하는 구원관과 비교할 때, 우리에게 어떤 절대적인 위로와 흔들리지 않는 확신을 줍니까?</p></div>
+                    <div class="card"><h3 class="font-bold text-[var(--primary)] mb-2">❤️ 적용</h3><p class="text-gray-800 font-medium">지금 내 삶에서 바벨론 강가처럼 버드나무에 수금을 걸어두고 낙심하여 멈춰버린 영적 영역(기도, 찬양, 감사)은 무엇입니까?</p></div>
+                    <div class="card"><h3 class="font-bold text-[var(--primary)] mb-2">🔥 결단</h3><p class="text-gray-800 font-medium">나의 구원이 흔들리지 않는 하나님의 이름에 묶여 있음을 기억하며, 절망적인 상황 속에서도 "다시 수금을 내리고" 찬양하기 위해 오늘 내가 선택할 구체적인 행동은 무엇입니까?</p></div>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec4')">이전</button>
+                <button class="btn-nav btn-next" onclick="scrollToSec('sec6')">5단계 실천 ➔</button>
+            </div>
+        </div>
+
+        <div class="slide-section" id="sec6">
+            <div class="section-content">
+                <span class="badge">Action Plan</span>
+                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-[var(--primary)] pb-2 inline-block mb-4">삶의 변화를 위한 5단계</h2>
+                <div class="space-y-3">
+                    <div class="card flex gap-3"><div class="bg-[var(--primary-light)] text-[var(--primary-dark)] px-3 py-1 rounded-lg font-bold shrink-0">1</div><p class="text-gray-700 pt-1">나는 하나님의 이름이 걸린 걸작품임을 기억하며, 스스로를 비하하지 않고 이웃도 함부로 대하지 않기</p></div>
+                    <div class="card flex gap-3"><div class="bg-[var(--primary-light)] text-[var(--primary-dark)] px-3 py-1 rounded-lg font-bold shrink-0">2</div><p class="text-gray-700 pt-1">자신의 과거 실수나 타인의 허물을 정죄하는 마음이 들 때, 이미 도말된 십자가의 장부 떠올리기</p></div>
+                    <div class="card flex gap-3"><div class="bg-[var(--primary-light)] text-[var(--primary-dark)] px-3 py-1 rounded-lg font-bold shrink-0">3</div><p class="text-gray-700 pt-1">원망이 나오는 답답한 상황(감옥 같은 자리)에서 의도적으로 수금을 내리듯 찬양 한 곡 부르기</p></div>
+                    <div class="card flex gap-3"><div class="bg-[var(--primary-light)] text-[var(--primary-dark)] px-3 py-1 rounded-lg font-bold shrink-0">4</div><p class="text-gray-700 pt-1">절망적인 고난의 현장에서 낙심하여 멈추었던 신앙의 습관(기도, 성경 읽기 등) 오늘 하나 다시 시작하기</p></div>
+                    <div class="card flex gap-3"><div class="bg-[var(--primary-light)] text-[var(--primary-dark)] px-3 py-1 rounded-lg font-bold shrink-0">5</div><p class="text-gray-700 pt-1">상황으로 인해 구원의 확신이 흔들리는 지인에게 다가가 "내가 나를 위하여"라는 은혜의 말씀 전해주기</p></div>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec5')">이전</button>
+                <button class="btn-nav btn-next" onclick="scrollToSec('sec7')">말씀 암송 ➔</button>
+            </div>
+        </div>
+
+        <div class="slide-section" id="sec7">
+            <div class="section-content flex flex-col justify-center text-center">
+                <span class="badge mx-auto">Memory Verse</span>
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">이번 주 암송 구절</h2>
+                <div class="card py-8 px-6 border-2 border-[var(--primary-light)]">
+                    <p class="text-xl leading-loose font-medium text-gray-800">
+                        나 곧 나는 <span class="mask-word">나를</span> 위하여 너의 <span class="mask-word">허물</span>을 도말하는 자니 네 <span class="mask-word">죄</span>를 기억지 아니하리라
+                    </p>
+                    <p class="mt-8 font-bold text-[var(--primary-dark)] text-lg">(이사야 43:25)</p>
+                </div>
+                <p class="text-gray-500 mt-8 text-sm">빈칸의 키워드를 터치하며 암송해 보세요.</p>
+            </div>
+            <div class="nav-footer">
+                <button class="btn-nav btn-prev" onclick="scrollToSec('sec6')">이전</button>
+                <button class="btn-nav bg-gray-800 text-white" onclick="scrollToSec('sec1')">처음으로 ↺</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function scrollToSec(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // 마스크 워드 터치 이벤트 (동적 바인딩)
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.mask-word').forEach(word => {
+                word.addEventListener('click', function() {
+                    this.style.background = 'transparent';
+                    this.style.color = 'var(--primary-dark)';
+                    this.style.fontWeight = 'bold';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
